@@ -1,0 +1,15 @@
+.btn-location {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1em;
+  color: var(--heading);
+  background-color: #ffc222;
+  border-radius: 8px;
+  padding: 20px 45px 20px 45px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}

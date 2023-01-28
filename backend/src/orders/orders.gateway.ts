@@ -15,12 +15,17 @@ export class OrdesGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
 {
   @WebSocketServer() server: Server;
-
+  private intervalId: any;
   afterInit(server: any) {
     console.log('Esto se ejecuta cuando inicia');
   }
 
+  sendEvent(order: any) {
+    console.log('apunto de enviar', order);
+    this.server.emit('event', `NEW ORDER ${JSON.stringify(order)}`);
+  }
   handleConnection(client: any, ...args: any[]) {
+    this.server.emit('event', `LISTORDERS}`);
     console.log('Hola alguien se conecto al socket 👌👌👌');
   }
 

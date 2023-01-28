@@ -1,0 +1,27 @@
+.card {
+  border-radius: 8px;
+  background-color: #ffffff;
+  padding: 15px;
+}
+.card:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  cursor: pointer;
+}
+.card_list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5% 7%;
+}
+@media (min-width: 900px) {
+  .card_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15% 5%;
+  }
+}
+span.completed {
+  background-color: #ffc222;
+}
+span:not(.completed) {
+  background-color: #00a850;
+}

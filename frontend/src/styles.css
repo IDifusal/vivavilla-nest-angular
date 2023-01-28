@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  --primary: #ffc222;
+  --secondary: #00a149;
+  --body: #808080;
+  --heading: #1e1d23;
+  --light: #999999;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+body {
+  background-color: #f7f2e2;
+}

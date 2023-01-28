@@ -1,0 +1,29 @@
+<div class="modal" *ngIf="visible">
+    <div class="modal_content bg-primary rounded p-5 relative">
+        <h3>{{order?.billing?.first_name}}</h3>
+        <div class="card-detail">
+            #{{order?.number}}
+        </div>
+        <div class="card-detail">
+            Name: {{order?.billing?.first_name + ' '+ order?.billing?.last_name}}
+        </div>
+        <div class="card-detail">
+            <span
+                class="px-4 py-2 rounded-full text-white font-semibold text-sm flex align-center w-max cursor-pointer transition duration-300 ease text-xs"
+                [class]=order?.status> {{order?.status | titlecase}}</span>
+        </div>
+        <div class="hr"></div>
+        <h3>Products</h3>
+        <div class="card-detail">
+            <div *ngFor="let product  of order?.line_items" class="product text-xs">
+                {{product.name}}
+            </div>
+        </div>
+        <div class="close cursor-pointer" (click)="closeModal()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z" />
+            </svg>
+        </div>
+    </div>
+</div>
